@@ -43,30 +43,3 @@ sumOfHrs = str(float(hourly * hrsWrkd))
 
 print(sumOfHrs)
 # print("Hola " + fname + " " + lname + ". You'll be paid " + sumOfHrs + " for the week.")
-
-
-
-
-
-# newEmployee = employee(firstName, lastName, empID, hourlyPay)
-
-# print(firstName + " " + lastName + " worked " + str(hours) + " hours this week and earned " + str(newEmployee.pay(hours)))
-
-
-
-# Sample Output:
-
-# Please enter the Employee's ID: 1
-# Please enter the Employee's First Name: John
-# Please enter the Employee's Last Name: Doe
-# Please enter the Employee's Hourly Pay Rate: 17.50
-# How many hours did John work this week? 26.25
-# John Doe's  paycheck amount is $459.38
-
- 
-# Please enter the Employee's ID: 28
-# Please enter the Employee's First Name: Jane
-# Please enter the Employee's Last Name: Robinson
-# Please enter the Employee's Hourly Pay Rate: 24.00
-# How many hours did Jane work this week? 46.25
-# Jane Robinson's paycheck amount is $1185.00
