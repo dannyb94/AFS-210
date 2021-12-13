@@ -10,7 +10,10 @@ class employee:
         if hrsWrkd <= 40:
             return hrsWrkd * emp.hourly
         if hrsWrkd > 40:
-            return ((hrsWrkd * emp.hourly) * 1.5)
+            regPay = 40 * emp.hourly
+            otPay = (hrsWrkd - 40) * (emp.hourly * 1.5)
+            return regPay + otPay
+            # return ((hrsWrkd * emp.hourly) * 1.5)
 
     def getFname(emp):
         return emp.fname
@@ -34,12 +37,13 @@ class employee:
     # print(employee1.pay(10))
     # print(employee1.pay(42))
 
-# fname = input("Employee first name: ")
-# lname = input("Employee last name: ")
-# empId = input("Employee Id#: ")
+fname = input("Employee first name: ")
+lname = input("Employee last name: ")
+empId = int(input("Employee Id#: "))
 hourly = float(input("Employee pay rate: "))
-hrsWrkd = int(input("Hours worked: "))
-sumOfHrs = str(float(hourly * hrsWrkd))
+hrsWrkd = float(input("Hours worked: "))
+# sumOfHrs = str(float(hourly * hrsWrkd))
 
-print(sumOfHrs)
-# print("Hola " + fname + " " + lname + ". You'll be paid " + sumOfHrs + " for the week.")
+employee1 = employee(fname, lname, empId, hourly)
+# print(sumOfHrs)
+print("Hola " + employee1.getFname() + " " + employee1.getLname() + ". You'll be paid " + str(employee1.pay(hrsWrkd)) + " for the week.")
