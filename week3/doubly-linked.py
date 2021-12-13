@@ -65,24 +65,6 @@ class DoublyLinkedList:
 
         self.count += 1
 
-        # if(index == 0):
-        #     self.addFirst(indxNode)
-        # elif(index == self.count):
-        #     self.addLast(indxNode)
-        # # If index is greater than the length, the data will not be inserted.    
-        # elif(index > self.count):
-        #     print("Error with input.")
-        # # This function does not replace the data at the index, but pushes everything else down.
-        # else:
-        #     crnt = self.head
-        #     for _ in range(index):
-        #         crnt = crnt.next
-        #     if(crnt == index-1):
-        #         indxNode.next = crnt.next
-        #         indxNode.prev = crnt
-        #         crnt.next = indxNode
-        #         crnt.next.prev = indxNode
-        #         self.count += 1  
 
 
     def indexOf(self, data):
@@ -99,20 +81,6 @@ class DoublyLinkedList:
             searching = searching.next
 
         return -1
-
-        # if(searching != None):
-        #     while(searching != None):
-        #         i += 1
-        #         if(searching.data == data):
-        #             dataFound += 1
-        #             break
-        #         searching.next
-        #     if(dataFound == 1):
-        #         print(i)
-        #     else:
-        #         print(-1)
-        # else:
-        #     print("NULL")
 
 
     def add(self, data) -> None:
