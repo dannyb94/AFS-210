@@ -14,7 +14,7 @@ class stack:
     # isEmpty() – Returns whether the stack is empty
     def isEmpty(self):
         return self.items == []
-        
+
     # peek() – Returns a reference to the top most element of the stack value. Does not remove the element.
     def peek(self):
         return self.items[len(self.items) -1]
@@ -65,5 +65,7 @@ def isPalindrome(myString):
     return False
 
 print(isPalindrome('racecar'))
+print(isPalindrome('noon'))
 print(isPalindrome('python'))
+print(isPalindrome('madam'))
 
