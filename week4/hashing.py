@@ -23,7 +23,12 @@ class HashTable:
                 self.data[hashValue] = data
                 self.slots[hashValue] = key
             else:
-                return None
+                hashValue = self.rehash(key)
+                if self.data[hashValue] == None:
+                    self.data[hashValue] = data
+                    self.slots[hashValue] = key
+                else:
+                    return None
 
     def get(self,key):
         # Insert your code here to get data by key
