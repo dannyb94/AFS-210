@@ -8,7 +8,7 @@
 
 def bnrySearch(list, search):
 	listLen = len(list)
-	for i in range(listLen):
+	for i in range(listLen): # instead of for loop use while loop
 		if search == list[i]:
 			return True
 	return False

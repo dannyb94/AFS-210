@@ -4,7 +4,7 @@ graph["B"] = {"E":3, "C":4}
 graph["C"] = {"D": 8}
 graph["D"] = {"E":7}
 graph["E"] = {"F":5}
-graph["F"] = {"E":5, "G":2}
+graph["F"] = {"H":2, "G":2}
 graph["G"] = {"F":1, "H":6}
 graph["H"] = {"F":9, "G":8}
 graph["I"] = {}
@@ -52,6 +52,7 @@ def dijsktra(graph, initial, end):
     current_node = initial
     visited = set()
     
+    cost = 0
     while current_node != end:
         visited.add(current_node)
         destinations = graph[current_node]
@@ -74,13 +75,14 @@ def dijsktra(graph, initial, end):
 
     # Work back through destinations in shortest path
     path = []
+    cost = shortest_paths[current_node][1]
     while current_node is not None:
         path.append(current_node)
         next_node = shortest_paths[current_node][0]
         current_node = next_node
     # Reverse path
     path = path[::-1]
-    return path
+    return path, cost
 
 # Expected Output:
 # Shortest path between a and h is  ['A', 'F', 'H']
@@ -88,4 +90,4 @@ def dijsktra(graph, initial, end):
 # The cost of going between a and h is 12
 print(breadth_first_search(graph, "A","H"))
 print(dijsktra(graph, "A","H"))
-print(breadth_first_search(graph, "A","H"))
+print(dijsktra(graph, "A","H")[1])
